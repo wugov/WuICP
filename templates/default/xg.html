@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>备案信息待审核</title>
+  <link rel="stylesheet" type="text/css" href="/templates/default/css/xg.css">
+  <link rel="stylesheet" type="text/css" href="/templates/default/css/footer.css">
+  <!-- 保持星.fun不变 -->
+  <link rel="stylesheet" href="https://scdn.星.fun/icp.css">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>{{site_name}}ICP备案信息审核ing~</h1>
+    <hr>
+    <h2>欢迎加入{{site_name}}ICP备，请站长在贵站页脚悬挂备案信息</h2>
+    <!-- 保持星.fun不变 -->
+    <h2>请先在head中引入<xmp><link rel="stylesheet" href="https://scdn.星.fun/icp.css"></xmp></h2>
+    <!-- 备案信息模板，动态替换site_name和域名 -->
+    <xmp id="icp-info"><div class="github-badge">
+  <span class="badge-subject">{{site_name}}备</span>
+  <a style="color:#fff" href="https://icp.星.fun/id.php?keyword={{icp_number}}" rel="external nofollow" target="_blank">
+    <span class="badge-value bg-cai">{{icp_number}}号</span>
+  </a>
+</div>
+    </xmp>
+    <button class="copy-btn" onclick="copyToClipboard()">复制备案信息</button>
+    <p><b>您的备案申请状态：</b>{{icp_status}}
+      ，请尽快按照上述要求与{{site_abbr}}ICP备对接！</p>
+    <p><b>待审核</b>的备案，我们会在2~4个休息日审核完成</p>
+    <p><b>备案被驳回</b>，请检查您的网站是否含有不适宜展示的内容，<br>
+      并确认您已经正确悬挂了备案信息，我们会在收到您的申诉邮件后重新审核</p>
+    <p>{{site_name}}ICP备案中心邮箱：{{admin_email}}</p>
+  </div>
+</div>
+<div class="footer">
+  {{footer_code_raw}}
+</div>
+<script>
+  function copyToClipboard() {
+    // 获取当前域名
+    var currentDomain = window.location.hostname;
+    // 获取模板内容
+    var template = document.getElementById('icp-info').innerText;
+    // 替换域名部分为当前域名
+    var text = template.replace('https://icp.星.fun', 'https://' + currentDomain);
+    
+    navigator.clipboard.writeText(text).then(function () {
+      alert('备案信息已复制到剪贴板！');
+    }, function (err) {
+      alert('复制失败，请手动复制。');
+    });
+  }
+
+  // 页面加载后自动更新页面中的链接为当前域名
+  document.addEventListener('DOMContentLoaded', function() {
+    var currentDomain = window.location.hostname;
+    
+    // 更新备案信息展示中的链接
+    var icpInfo = document.getElementById('icp-info');
+    icpInfo.innerHTML = icpInfo.innerHTML.replace('https://icp.星.fun', 'https://' + currentDomain);
+    
+    // 如果{{site_name}}没有被后端替换，可以在这里用JavaScript替换
+    if (document.body.innerHTML.includes('{{site_name}}') && typeof siteName !== 'undefined') {
+      document.body.innerHTML = document.body.innerHTML.replace(/\{\{site_name\}\}/g, siteName);
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+.settings {
+    /* 设置一个固定的高度 */
+    height: 90%; /* 你可以根据需要调整这个高度 */
+    width: 70%;
+    position: absolute;
+    right: 0;
+    /* 设置溢出内容为可滚动 */
+    overflow-y: auto;
+    /* 如果需要，也可以设置水平滚动 */
+    overflow-x: hidden; /* 或者 'auto'，取决于你的需求 */
+}
+
+/* 你可以添加一些额外的样式来美化滚动条（如果需要） */
+.settings::-webkit-scrollbar {
+    width: 8px; /* 设置滚动条的宽度 */
+}
+
+.settings::-webkit-scrollbar-thumb {
+    background-color: darkgrey; /* 设置滚动条滑块的背景颜色 */
+    border-radius: 10px; /* 设置滚动条滑块的圆角 */
+}
+
+.settings::-webkit-scrollbar-track {
+    background: #f1f1f1; /* 设置滚动条轨道的背景颜色 */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    width: 200px;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.code-block {
+    background-color: #fff;
+    border-radius: 5px;
+    overflow-x: auto;
+    max-width: 600px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    margin-top: 30px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+/* 复选框美化 */
+.checkbox-class {
+    /* 增加间距以便于点击 */
+    margin-right: 10px;
+    /* 改变默认外观 */
+    /*appearance: none;*/
+    /* 使用自定义图片作为背景 */
+    /*background-image: url('path/to/your/custom-checkbox.png');*/
+    background-size: cover;
+    width: 16px; /* 根据实际图片大小调整 */
+    height: 16px; /* 根据实际图片大小调整 */
+    border: none; /* 移除边框 */
+    outline: none; /* 移除焦点轮廓 */
+
+    /* 当选中时的状态 */
+
+    &:checked {
+        /* 可以更改背景图或增加其他视觉效果 */
+        /*background-image: url('path/to/your/custom-checkbox-checked.png');*/
+    }
+}
+
+/* 按钮美化 */
+.button-class {
+    /* 调整基本样式 */
+    padding: 10px 20px;
+    color: white;
+    background-color: #007BFF; /* 蓝色背景 */
+    border: none;
+    border-radius: 5px; /* 圆角 */
+    cursor: pointer; /* 光标变为手形 */
+
+    /* 鼠标悬停时变化 */
+
+    &:hover {
+        background-color: #0056b3; /* 更深的蓝色 */
+    }
+
+    /* 点击时变化 */
+
+    &:active {
+        transform: translateY(1px); /* 微微下移 */
+    }
+}

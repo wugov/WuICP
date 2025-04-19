@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    margin: 0;
+}
+
+#sidebar {
+    width: 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+#content {
+    position: absolute;
+    left: 10%;
+    flex-grow: 1;
+    padding: 15px;
+}
+
+form {
+    max-width: 550px;
+    margin-bottom: 15px;
+}
+
+table {
+    position: absolute;
+    left: 15%;
+    top: 5%;
+    width: 80%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}

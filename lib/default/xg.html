@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>备案信息待审核</title>
+  <link rel="stylesheet" type="text/css" href="/templates/default/css/xg.css">
+  <link rel="stylesheet" type="text/css" href="/templates/default/css/footer.css">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>{{site_name}}ICP备案信息审核ing~</h1>
+    <hr>
+    <h2>欢迎加入{{site_name}}ICP备，请站长在贵站页脚悬挂备案信息</h2>
+    <xmp id="icp-info"><a href="https://icp.scfc.top/id.php?keyword={{icp_number}}" target="_blank"><img style="width:32px;height:32px;" src="https://scdn.xn--kiv.fun/wuicp/favicon.ico">雾ICP备{{icp_number}}号</a>
+    </xmp>
+    <button class="copy-btn" onclick="copyToClipboard()">复制备案信息</button>
+    <p><b>您的备案申请状态：</b>{{icp_status}}
+      ，请尽快按照上述要求与{{site_abbr}}ICP备对接！</p>
+    <p><b>待审核</b>的备案，我们会在2~4个休息日审核完成</p>
+    <p><b>备案被驳回</b>，请检查您的网站是否含有不适宜展示的内容，<br>
+      并确认您已经正确悬挂了备案信息，我们会在收到您的申诉邮件后重新审核</p>
+    <p>{{site_name}}ICP备案中心邮箱：{{admin_email}}</p>
+  </div>
+</div>
+<div class="footer">
+  {{footer_code_raw}}
+</div>
+<script>
+  function copyToClipboard() {
+    var text = document.getElementById('icp-info').innerText;
+    navigator.clipboard.writeText(text).then(function () {
+      alert('备案信息已复制到剪贴板！');
+    }, function (err) {
+      alert('复制失败，请手动复制。');
+    });
+  }
+</script>
+</body>
+</html>

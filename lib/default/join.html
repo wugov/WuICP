@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>加入{{site_name}}ICP备案</title>
+  <link rel="icon" href="{{site_avatar}}" type="image/png">
+  <meta name="keywords"
+        content="加入{{site_abbr}}备, 加入{{site_abbr}}ICP备, {{site_name}}ICP备案中心">
+  <meta name="description"
+        content="加入{{site_abbr}}备！快来申请一个可爱又好玩的{{site_abbr}}ICP备号叭~">
+  <link rel="stylesheet" type="text/css" href="/templates/default/css/index.css">
+  <link rel="stylesheet" type="text/css" href="/templates/default/css/footer.css">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <style>
+    p {
+      color: white;
+      text-shadow: 2px 2px 5px black;
+    }
+  </style>
+  <script>
+    // 当文档加载完毕时执行
+    document.addEventListener('DOMContentLoaded', function () {
+      // 绑定表单提交事件
+      document.querySelector('form').addEventListener('submit', function (event) {
+        // 获取用户输入的备案号
+        var icpNumber = document.querySelector('input[name="icp_number"]').value.trim();
+
+        // 使用正则表达式验证备案号
+        if (!/^\d{8}$/.test(icpNumber)) {
+          // 如果验证失败，阻止表单提交并弹出警告
+          event.preventDefault(); // 阻止表单提交
+          alert("备案号必须是8位纯数字。");
+        }
+        // 如果验证通过，表单将正常提交
+      });
+    });
+  </script>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>加入{{site_name}}ICP备案</h1>
+  </div>
+  <div class="search-box">
+    <form action="join.php" method="post">
+      <input type="text" name="icp_number" class="search-input"
+             placeholder="请输入你想拥有的{{site_abbr}}号(8位纯数字)" required>
+      <button type="submit" class="search-button">加入</button>
+    </form>
+  </div>
+  <p>提交申请后，会在{{audit_duration}}个休息日审核<br>
+    若超过7天仍未回复，请联系{{site_name}}ICP备案中心<br>
+    邮箱：{{admin_email}}</p>
+</div>
+<div class="footer">
+  {{footer_code_raw}}
+</div>
+</body>
+</html>

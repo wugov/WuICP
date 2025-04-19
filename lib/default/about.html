@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/templates/default/css/index.css">
+  <link rel="stylesheet" type="text/css" href="/templates/default/css/footer.css">
+  <link rel="icon" href="{{site_avatar}}" type="image/png">
+  <meta name="keywords"
+        content="关于{{site_abbr}}备, 关于{{site_abbr}}ICP备, 关于{{site_name}}ICP备案中心">
+  <meta name="description"
+        content="{{admin_nickname}}去野餐时爱(I)吃(C)苹(P)果派,需要提前准备,俗称“{{site_abbr}}ICP备”,简称“{{site_abbr}}备">
+  <title>关于{{site_name}}ICP备案</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <style>
+    .colored-text {
+      color: #7dc3f6;
+      font-weight: bold;
+      text-shadow: 1px 1px 0 white;
+    }
+
+    /* 覆盖index.css中的.container样式，移除垂直居中 */
+    .container {
+      position: static; /* 移除绝对定位 */
+      top: auto; /* 移除垂直居中 */
+      left: auto; /* 移除水平居中 */
+      transform: none; /* 移除平移变换 */
+      align-items: flex-start; /* 从顶部开始排列 */
+      justify-content: flex-start; /* 从顶部开始排列 */
+    }
+
+    .join {
+      padding: 10px 20px; /* 内边距 */
+      border: none; /* 移除边框 */
+      border-radius: 15px; /* 边框圆角 */
+      background-color: #7dc3f6; /* 背景颜色 */
+      cursor: pointer; /* 鼠标样式为指针 */
+      outline: none; /* 移除聚焦时的轮廓线 */
+
+    }
+
+    .button-container {
+      display: flex; /* 设置为Flexbox容器 */
+      justify-content: center; /* 水平居中按钮 */
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h2>什么是{{site_name}}ICP备？</h2>
+
+    <p>{{admin_nickname}}去野餐时爱(<span class="colored-text">I</span>)吃(<span
+            class="colored-text">C</span>)苹(<span class="colored-text">C</span>)果派,需要提前准<span
+            class="colored-text">备</span>P<br>俗称“<span
+            class="colored-text">{{site_abbr}}ICP备</span>”,简称“{{site_abbr}}
+      备"</p>
+
+
+    <h2>为什么加入{{site_abbr}}备</h2>
+    <p>{{site_abbr}}ICP备，是众多{{site_abbr}}
+      友的网站都聚在一起可可爱爱！</p>
+    <p>是一种异次元中的爱好，可爱和个性的展现</p>
+    <p>将{{site_abbr}}备放在博客页脚，是很好看的装饰喔</p>
+    <h2>{{admin_nickname}}有话说</div>
+  </h2>
+  <p>欢迎各大喜爱{{site_name}}
+    的站长加入鸭~<br>快来给自己的网站加上个可爱的{{site_abbr}}ICP号”</p>
+  <div class="button-container">
+    <button class="join" onclick="location.href='join.php'">加入{{site_abbr}}ICP备
+    </button>
+  </div>
+  <p>若你在万千网站中遇到{{site_abbr}}备</p>
+  <p>甚有缘分! ✧(≖ ◡ ≖✿)</p>
+  <br><br><br>
+</div>
+</div>
+<div class="footer">
+  {{footer_code_raw}}
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>{{site_name}}ICP信息更改</title>
+  <link rel="icon" href="{{site_avatar}}" type="image/png">
+  <meta name="keywords" content="{{site_keywords}}">
+  <meta name="description" content="{{site_description}}">
+  <link rel="stylesheet" type="text/css" href="/templates/default/css/index.css">
+  <link rel="stylesheet" type="text/css" href="/templates/default/css/footer.css">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>{{site_name}}ICP信息更改</h1>
+  </div>
+  <div class="search-box">
+    <form action="change.php" method="get">
+      <input type="text" name="keyword" class="search-input" placeholder="请输入8位备案号 OR 域名" required><br>
+      <p style="text-align: center;">{{site_description}}</p>
+      <p style="color: #FF9999; text-align: center;">{{noRecordMessage}}</p>
+    </form>
+  </div>
+</div>
+<div class="footer">
+  {{footer_code_raw}}
+</div>
+</body>
+</html>

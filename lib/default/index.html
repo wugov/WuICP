@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>{{site_name}}ICP备案中心</title>
+    <link rel="icon" href="{{site_avatar}}" type="image/png">
+    <meta name="keywords" content="{{site_keywords}}">
+    <meta name="description" content="{{site_description}}">
+    <link rel="stylesheet" type="text/css" href="/templates/default/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/templates/default/css/footer.css">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>{{site_name}}ICP备案中心</h1>
+    </div>
+    <div class="search-box">
+        <form action="index.php" method="get">
+            <input type="text" name="keyword" class="search-input" placeholder="请输入8位备案号 OR 域名" required><br>
+            <p style="text-align: center;">{{site_description}}</p>
+            <p style="color: #FF9999; text-align: center;">{{noRecordMessage}}</p>
+        </form>
+    </div>
+</div>
+<div class="footer">
+    {{footer_code_raw}}
+</div>
+<style>
+/* 弹窗样式 */
+.modal {
+  display: block; /* 修改为默认显示 */
+  position: fixed; /* 固定位置 */
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%; /* 全宽 */
+  height: 100%; /* 全高 */
+  overflow: auto; /* 如果内容溢出，则显示滚动条 */
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto; /* 15%从顶部和底部边缘自动居中 */
+  padding: 40px;
+  border-radius: 8px;
+  width: 50%; /* 弹窗宽度 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards; /* 保持动画结束状态 */
+}
+
+/* 添加媒体查询，当屏幕宽度小于1000像素时 */
+@media (max-width: 1000px) {
+  .modal-content {
+    width: 100%; /* 弹窗宽度占满整个屏幕 */
+    padding: 20px; /* 内边距适当减小 */
+    margin: 0; /* 移除上下边距 */
+  }
+}
+
+/* 添加渐隐动画 */
+@keyframes fadein {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes fadeout {
+  from {opacity: 1}
+  to {opacity: 0}
+}
+
+/* 关闭按钮样式 */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  text-decoration: none;
+}
+
+/* 标题样式 */
+.modal-header h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 24px;
+}
+
+/* 内容样式 */
+.modal-body p {
+  margin: 10px 0;
+  color: #666;
+  font-size: 16px;
+}
+
+/* 重要信息样式 */
+.important {
+  color: #f44336;
+  font-weight: bold;
+}
+
+/* 联系方式样式 */
+.contact-info {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.contact-info span {
+  color: #f44336;
+  font-weight: bold;
+}
+
+/* 提示信息样式 */
+.tip {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
+}
+
+</style>
+
+<!-- 弹窗内容开始 -->
+<div id="myModal" class="modal">
+
+  <!-- 弹窗内容 -->
+  <div class="modal-content">
+    <div class="modal-header"><span class="close">&times;</span>
+      <h2>✨温馨提示—本站使用机器人进行审核!</h2>
+      
+
+    </div>
+    <div class="modal-body">
+      <h3 class="important">
+        请在提交申请前悬挂标识:</h3>
+      <div class="contact-info">
+          <span><xmp><a href="https://icp.scfc.top/id.php?keyword=xxxx" target="_blank">
+<img style="width:32px;height:32px;" src="https://scdn.星.fun/wuicp/favicon.ico">雾ICP备xxxx号</a></xmp></span>
+          <br>
+          站长交流Q群：<span>665751334</span>
+      </div>
+      <h3 class="tip">✨申请时会调用机器人进行巡查，自动审核!🎉</h3>
+    </div>
+  </div>
+
+</div>
+<!-- 弹窗内容结束 -->
+
+<script>
+// 获取弹窗元素
+var modal = document.getElementById("myModal");
+
+// 获取关闭按钮元素
+var span = document.getElementsByClassName("close")[0];
+
+// 显示弹窗并添加渐隐动画
+function showModal() {
+  modal.style.display = "block";
+  modal.style.animationName = "fadein";
+  modal.style.animationDuration = "0.4s";
+}
+
+// 隐藏弹窗并添加渐隐动画
+function hideModal() {
+  modal.style.animationName = "fadeout";
+  modal.style.animationDuration = "0.4s";
+  modal.addEventListener('animationend', function() {
+    modal.style.display = "none";
+  });
+}
+
+// 当点击关闭按钮时，隐藏弹窗
+span.onclick = function() {
+  hideModal();
+}
+
+// 当点击弹窗外区域时，隐藏弹窗
+window.onclick = function(event) {
+  if (event.target == modal) {
+    hideModal();
+  }
+}
+
+// 立即显示弹窗，无需等待页面加载完成
+showModal();
+</script>
+</body>
+</html>

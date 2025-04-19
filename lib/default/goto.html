@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>星际迁跃</title>
+    <link rel="icon" href="{{site_avatar}}"/>
+    <link rel="stylesheet" href="/templates/default/css/qy.css"/>
+</head>
+
+<body>
+<div class="blink">
+    <a href="#" id="jumpLink" title="点我开始迁跃！"
+       onclick="fetchRandomUrl()">欢迎回来，点我开始<b>&nbsp;星际迁跃&nbsp;</b>，下一个世界属于你…<br/>Welcome
+        back, you are undergoing interstellar transition, the next world belongs to you…</a>
+</div>
+<div class="botCenter">
+    <b style="font-size: 15px; font-weight: bold; color: red;">⬆️ Tips: 点击上方文字开始迁跃</b> | <a href="https://icp.scfc.top/" class="links" target="_blank" style="font-size: 15px; font-weight: bold; color: cyan;">☁️
+    加入雾ICP备</a>
+    <br/>
+    <img src="https://icp.scfc.top/SCFC.png" alt="icon" class="cn-logo"><a href="https://icp.scfc.top/id.php?keyword=scfcicp"
+                                                                                  target="_blank">雾ICP备scfcicp号</a>
+</div>
+
+<div id="notice">
+    Hi，这里是我们的 <a class="links" href="{{feedback_link}}" target="_blank">QQ群</a>，欢迎加入~
+</div>
+<script>
+    function fetchRandomUrl() {
+        // 禁用链接以防止重复点击
+        const link = document.getElementById('jumpLink');
+        link.disabled = true;
+        link.style.pointerEvents = 'none';
+
+        // 发送请求到API获取随机域名
+        fetch('/api/v1/goto.php')
+            .then(response => response.json())
+            .then(data => {
+                // 拼接完整的URL
+                const fullUrl = '//' + data.url + '/';
+                // 使用window.location进行跳转
+                window.location.href = fullUrl;
+            })
+            .catch(error => {
+                console.error('Error fetching random URL:', error);
+                // 启用链接
+                link.disabled = false;
+                link.style.pointerEvents = 'auto';
+            });
+    }
+</script>
+<script src="/templates/default/js/qy.js"></script>
+</body>
+
+</html>

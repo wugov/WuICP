@@ -1,0 +1,10 @@
+User-agent: *
+User-agent: *
+Allow: /
+Allow: /about.php/
+Allow: /joinus.php/
+Allow: /change.php/
+Allow: /gs.php/
+Allow: /qy.php/
+Disallow: /admin/
+Disallow: /admin-next/

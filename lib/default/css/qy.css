@@ -1,0 +1,134 @@
+* {
+    color: #111827;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    transition: background-color 0.5s;
+}
+
+@media (prefers-color-scheme: dark) {
+    * {
+        color: #f9fafb;
+    }
+
+    body {
+        background: #111111;
+    }
+}
+
+.blink {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    animation: blink 3s linear infinite;
+    -webkit-animation: blink 3s linear infinite;
+    -moz-animation: blink 3s linear infinite;
+    -ms-animation: blink 3s linear infinite;
+    -o-animation: blink 3s linear infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    40% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(0.98);
+    }
+
+    100% {
+        opacity: 0.2;
+        transform: scale(1.2);
+    }
+}
+
+.botCenter {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    bottom: 10px;
+    line-height: 20px;
+    font-size: 12px;
+    text-align: center;
+    animation: botCenter 3s linear;
+    -webkit-animation: botCenter 3s linear;
+    -moz-animation: botCenter 3s linear;
+    -ms-animation: botCenter 3s linear;
+    -o-animation: botCenter 3s linear;
+}
+
+@keyframes botCenter {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.links {
+    --link-color: #5372b4;
+    color: var(--link-color);
+}
+
+.links:hover {
+    border-bottom: 2px solid var(--link-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    .links {
+        --link-color: #9ca3af;
+    }
+}
+
+.cn-logo {
+    width: 28px;
+    height: 18px;
+    margin-right: 2px;
+}
+
+.beian-logo {
+    width: 15px;
+    height: 15px;
+    margin-right: 0px;
+}
+
+#notice {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 0.75rem;
+    background-color: #eee;
+    font-size: 0.8rem;
+    transform: translateY(-100%);
+    transition: transform 0.5s;
+}
+
+@media (prefers-color-scheme: dark) {
+    #notice {
+        background-color: #222;
+    }
+}

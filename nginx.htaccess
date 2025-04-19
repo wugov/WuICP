@@ -1,0 +1,6 @@
+location / {
+    try_files $uri$uri/ /$uri/index.php?$args;
+}
+location /api/v1/ {
+    try_files $uri$uri/ /api/v1/index.php?action=$uri&$args;
+}

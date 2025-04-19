@@ -1,0 +1,30 @@
+.colored-text {
+    color: #7dc3f6;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 white;
+}
+
+/* 覆盖index.css中的.container样式，移除垂直居中 */
+.container {
+    position: static; /* 移除绝对定位 */
+    top: auto; /* 移除垂直居中 */
+    left: auto; /* 移除水平居中 */
+    transform: none; /* 移除平移变换 */
+    align-items: flex-start; /* 从顶部开始排列 */
+    justify-content: flex-start; /* 从顶部开始排列 */
+}
+
+.join {
+    padding: 10px 20px; /* 内边距 */
+    border: none; /* 移除边框 */
+    border-radius: 15px; /* 边框圆角 */
+    background-color: #7dc3f6; /* 背景颜色 */
+    cursor: pointer; /* 鼠标样式为指针 */
+    outline: none; /* 移除聚焦时的轮廓线 */
+
+}
+
+.button-container {
+    display: flex; /* 设置为Flexbox容器 */
+    justify-content: center; /* 水平居中按钮 */
+}

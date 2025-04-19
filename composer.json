@@ -1,0 +1,17 @@
+{
+  "require": {
+    "bacon/bacon-qr-code": "^3.0",
+    "spomky-labs/otphp": "^11.3",
+    "unleash/client": "^2.5",
+    "firebase/php-jwt": "^6.10",
+    "symfony/http-client": "*",
+    "nyholm/psr7": "*",
+    "cboden/ratchet": "^0.4.4",
+    "phpmailer/phpmailer": "^6.9"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": true
+    }
+  }
+}

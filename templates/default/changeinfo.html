@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>{{site_name}}ICP信息更改</title>
+  <link rel="stylesheet" type="text/css" href="/templates/default/css/reg.css">
+  <link rel="stylesheet" type="text/css" href="/templates/default/css/footer.css">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <script>
+    window.onload = function () {
+      document.getElementById("regForm").onsubmit = validateForm;
+    };
+
+    function validateForm() {
+      var websiteUrl = document.getElementById("website_url").value;
+      var urlPattern = /^(https?:\/\/)?([\p{L}\d.-]+)\.([a-z.]{2,6})([\/\w .-]*)*\/?$/iu;
+      if (!urlPattern.test(websiteUrl)) {
+        alert("网址格式不正确，请输入正确的网址格式，如：example.com");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>{{site_name}}ICP信息更改</h1>
+  </div>
+  <div class="reg-box">
+    <form id="regForm" action="changeinfo.php" method="post">
+      <input type="text" name="website_name" class="input" placeholder="网站名称(必填)" value="{{website_name}}" required>
+      <input type="text" id="website_url" name="website_url" class="input" placeholder="网站域名(必填)" value="{{website_url}}" required>
+      <p>不要填写http(s)协议头!</p>
+      <input type="text" name="website_info" class="input" placeholder="网站描述(必填)" value="{{website_info}}" required>
+      <input type="text" name="icp_number" class="input hidden" placeholder="备案号" value="{{icp_number}}" required readonly>
+      <input type="text" name="update_time" class="input hidden" placeholder="时间" value="{{current_time}}" required readonly>
+      <input type="text" name="owner" class="input" placeholder="所有者(必填)" value="{{owner}}" required>
+      <input type="email" name="email" class="input" placeholder="邮箱(必填)" value="{{email}}" required>
+      <input type="text" name="qq" class="input" placeholder="QQ(必填)" value="{{qq}}">
+      <p>你必须正确填写申请时设置的安全码!</p>
+      <input type="text" name="passwd" class="input" placeholder="安全码(必填)">
+      <button type="submit" class="tj">提交更改信息</button>
+    </form>
+  </div>
+  <p>邮箱和QQ是验证备案信息所有权的重要凭证!<br>
+    安全码是修改信息时验证所有者的重要凭证!<br>
+    提交申请后，会在{{audit_duration}}个休息日审核<br>
+    若超过7天仍未回复，请联系{{site_name}}ICP备案中心<br>
+    邮箱：{{admin_email}}</p>
+</div>
+<div class="footer">
+  {{footer_code_raw}}
+</div>
+</body>
+</html>

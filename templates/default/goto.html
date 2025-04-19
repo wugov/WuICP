@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>星际迁跃</title>
+    <link rel="icon" href="{{site_avatar}}"/>
+    <link rel="stylesheet" type="text/css" href="/templates/default/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/templates/default/css/footer.css">
+    <link rel="stylesheet" href="https://scdn.星.fun/icp.css">
+    <link rel="stylesheet" href="/templates/default/css/qy.css"/>
+</head>
+
+<body>
+<div class="blink">
+    <a href="#" id="jumpLink" title="点我开始迁跃！"
+       style="color: #7dc3f6;"
+       onclick="fetchAndOpenRandomUrl(); return false;">
+       欢迎回来，点我开始
+       <b style="color: #7dc3f6;">&nbsp;星际迁跃&nbsp;</b>
+       ，下一个世界属于你…
+       <br/>
+       <span style="color: #7dc3f6;">
+           Welcome back, you are undergoing interstellar transition, the next world belongs to you…
+       </span>
+    </a>
+</div>
+<div class="botCenter">
+    <b style="font-size: 15px; font-weight: bold; color: red;">⬆️ Tips: 点击上方文字开始迁跃</b> | 
+    <a href="#" id="icpLink" class="links" target="_blank" style="font-size: 15px; font-weight: bold; color: cyan;">
+        ☁️ 加入{{site_name}}ICP备
+    </a>
+    <br/>
+    <div class="github-badge">
+        <span class="badge-subject">信备</span>
+        <a id="recordLink" style="color:#fff" href="#" rel="external nofollow" target="_blank">
+            <span class="badge-value bg-cai">20250000号</span>
+        </a>
+    </div>
+</div>
+
+<div id="notice">
+    Hi，这里是我们的 <a class="links" href="{{feedback_link}}" target="_blank">QQ群</a>，欢迎加入~
+</div>
+<script>
+    // 获取当前域名并设置链接
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentDomain = window.location.hostname;
+        const icpLink = document.getElementById('icpLink');
+        const recordLink = document.getElementById('recordLink');
+        icpLink.href = `https://${currentDomain}/`;
+        recordLink.href = `https://icp.govs.xin/id.php?keyword=20250000`;
+        
+    });
+
+    function fetchAndOpenRandomUrl() {
+        const link = document.getElementById('jumpLink');
+        link.style.pointerEvents = 'none';
+        
+        fetch('/api/v1/goto.php')
+            .then(response => response.json())
+            .then(data => {
+                window.open('//' + data.url + '/', '_blank');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                link.style.pointerEvents = 'auto';
+            });
+    }
+</script>
+<script src="/templates/default/js/qy.js"></script>
+</body>
+</html>
