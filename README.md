@@ -36,8 +36,8 @@
 
 ### 站点配置
 ## 请勿开启redis，有未知bug
-### 数据库和邮箱配置
-config.php中修改
+- 数据库和邮箱配置
+- 在config.php中修改
 ![config](https://github.com/user-attachments/assets/4570f633-ecc5-4afa-9085-cd31211b80d9)
 
 ## 点个Star!!!
