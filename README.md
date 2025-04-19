@@ -1,16 +1,11 @@
-![image](https://github.com/user-attachments/assets/be69c819-0a1e-4e5a-abbe-619b13aaa371)
-
 # 请务必务必看完整个readme！！！ 📚
 
 # 项目介绍
-🌠雾ICP备案系统二开自[TuanICP v1.0](https://github.com/yuntuanzi/TuanICP)
-
+🌠雾ICP备案系统二开自[TuanICP v1.0](https://github.com/yuntuanzi/TuanICP)🌟
+💖开源、🩷UI可爱、🩵界面美观
 非常适合作为博客页脚的可爱装饰哦！🎈
 
-☁️预览站点：[https://icp.星.fun/](https://icp.星.fun/)
-
-
-> 🎉这个系统是利用课余时间开发的，还不错叭？
+☁️预览站点：[雾ICP备案中心](https://icp.scfc.top/)
 
 ## 1.0旧版系统展示
 (背景是随机二次元图片哦～) 🎨
