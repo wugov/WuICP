@@ -7,39 +7,22 @@
 
 ☁️预览站点：[雾ICP备案中心](https://icp.scfc.top/)
 
-## 1.0旧版系统展示
+## 二开版本效果展示
 (背景是随机二次元图片哦～) 🎨
-![id](https://github.com/user-attachments/assets/f07d88cf-887a-4967-b066-ecb0e11b1b1c)
-![index](https://github.com/user-attachments/assets/13865de9-b6e6-4319-86fa-f66fb12024e4)
-跃迁功能（随机跳转一个记录在团ICP中的网站）
-![qy](https://github.com/user-attachments/assets/664e1fe2-15d6-441f-9322-c56c00e31b09)
+![index](https://cdn.tulan.cyou/scfc/2025/04/19/view_1.png)
+![gs](https://cdn.tulan.cyou/scfc/2025/04/19/view_2.png)
+![qy](https://cdn.tulan.cyou/scfc/2025/04/19/view_3.png)
+![admin](https://cdn.tulan.cyou/scfc/2025/04/19/view_4.png)
 
-## 2.0新版系统展示
-![2471c64033d37cffedd0ef65da558193](https://github.com/user-attachments/assets/9b8b4e3c-f509-4c77-8aad-16e92583e0a1)
-![93155002f8b5620ffbaad8cf8197aa02](https://github.com/user-attachments/assets/4bbf9baa-c42f-419b-b472-a657824635f1)
-![f942ac601ce51bf0f7870d34f8f64151](https://github.com/user-attachments/assets/35712e28-d5c0-4358-bb5a-acb822c80e36)
-![3bdc306e66c0535b491534024191b9db](https://github.com/user-attachments/assets/1ebe4b6e-435b-4d68-b1c1-755c3c56adb1)
-![d3c326d18cbcf623f069d107244d3ed6](https://github.com/user-attachments/assets/56ed31d8-b4a3-4838-9337-549a7f28bad0)
-![f7352a05cbedb55a64665a17bbb8a1a0](https://github.com/user-attachments/assets/3d463a8e-4659-483c-b0de-438ba163d05f)
-![073863e76a8615b6b059a105a443a1ec](https://github.com/user-attachments/assets/9c7eff76-fede-41c6-8d6a-1151156e96db)
-![c092ea32af5a4251f14d757d16c19ca3](https://github.com/user-attachments/assets/67eefdaf-de00-4eb4-8af2-91c053526077)
-
-开源版的功能并不完整，如果需要完整版，可以联系我们获取～（点个Star享受骨折价！）
-
-曾经，风屿岛与云团子同时维护此项目，由于变动，biliwind已不参与本项目开发、销售等任何环节。
-
-开源版会不定期维护更新，加入交流Q群：[云团子 站长2群](https://qm.qq.com/q/zWdw1HqaOY)
+二开会不定期维护更新，加入交流Q群：[站长交流群](https://qm.qq.com/q/itnrafWpXi)
 
 ## 点个Star!!!
 如果觉得项目不错，别忘了点个免费的Star支持一下，你们的鼓励是我们最大的动力！！！ ⭐️
 
 # 源码下载和项目部署
-**🧡开源版源码下载：** 加入Q群967140086获取
-
-**🩷授权线下购买：** 云团子QQ：937319686
-
-**🩵在线购买授权：** 敬请期待
-
+**🧡源码下载：** 
+- 加入Q群665751334获取
+- 蓝奏云链接：[点击下载](https://t-bu.cn/b00b4mwnpe)（提取码：scfc）
 ### 环境支持
 - PHP >= 8.1
 - MySQL >= 5.6
@@ -49,11 +32,6 @@
 ### 部署方式
 1. 下载源码
 2. 访问http(s)://domain或ip/install.php安装
-# 完整版与开源版的区别
-🧡开源版功能有限，例如缺少邮箱验证码，安全策略相对较弱（但仍有一定的安全性），审核修改数据需要手动进入数据库操作；
-
-🩵完整版则包含后台管理系统，审核通过后会自动邮件通知用户，系统会自动清理无效备案号，并定期自动ping所有备案网站以确保其正常运作。后台支持一键更新新版本，可以审批、驳回、修改、添加备案信息；
-
 🩷购买授权后，您将享有终身免费更新和无限次远程协助，并可免费反馈问题。
 # 项目声明
 - 严禁倒卖或未经授权进行二次开发后倒卖源码。
