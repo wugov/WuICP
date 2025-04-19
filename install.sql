@@ -1,31 +1,6 @@
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
---
--- 主机： localhost
--- 生成日期： 2024-12-28 16:03:06
--- 服务器版本： 8.0.24
--- PHP 版本： 8.1.30
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT = @@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS = @@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION = @@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- 数据库： `icp`
---
-
--- --------------------------------------------------------
-
---
--- 表的结构 `admin`
---
 
 CREATE TABLE IF NOT EXISTS `admin`
 (
@@ -109,18 +84,8 @@ CREATE TABLE IF NOT EXISTS `icp_records`
 
 INSERT INTO `icp_records` (`id`, `website_name`, `website_url`, `website_info`, `icp_number`, `owner`, `update_time`,
                            `STATUS`, `email`, `qq`, `security_code`)
-VALUES (1, '云团子的博客', 'www.yuncheng.fun', '欸？是谁家的小可爱？', '20243017', '云团子', '2024-10-02 22:59:19',
-        '审核通过', 'yun@yuncheng.fun', '937319686', ''),
-       (2, '风屿岛', 'www.biliwind.com', '不知名海域的知名岛屿', '00000000', '风屿Wind', '2024-10-06 00:00:06',
-        '审核通过', 'admin@biliwind.com', '1827348941', ''),
-       (3, '云团子ICP备案中心', 'icp.yuncheng.fun', '欸？是谁家的小可爱？快来申请一个可爱又好玩的团ICP备号叭~',
-        '20243999', '云团子', '2024-10-19 12:06:46', '审核通过', 'yun@yuncheng.fun', '937319686', ''),
-       (4, '风屿团IDC', 'www.tuanidc.cn', '一定是最可爱的计算云服务商', '20243088', '风屿团数据中心',
-        '2024-11-17 12:49:32', '审核通过', 'yun@yuncheng.fun', '937319686', ''),
-       (5, '风屿岛GitLab', 'gitlab.biliwind.com', '不知名海域的知名岛屿', '00000001', '风屿Wind', '2024-11-22 14:30:52',
-        '审核通过', 'admin@biliwind.com', '1827348941', ''),
-       (6, '木屿岛', 'muyuwind.top', '普通海域的奇怪岛屿', '00000002', '风屿Wind', '2024-12-22 18:15:37', '审核通过',
-        'admin@biliwind.com', '1827348941', '');
+VALUES (1, '雾ICP备案中心', 'icp.scfc.top', '欢迎各大喜爱 雾都 的站长加入鸭~ 快来给自己的网站加上个可爱的雾ICP号', 'WUICP', '雾都云', '2024-10-02 22:59:19',
+        '审核通过', 'yun@yuncheng.fun', '2907713872', '');
 -- --------------------------------------------------------
 
 --

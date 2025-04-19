@@ -1,6 +1,7 @@
 <?php
 //define('ABSPATH', dirname(__DIR__));
 // 引入配置文件
+
 require_once $_SERVER['DOCUMENT_ROOT'] . '/lib/function.php';
 global $pdo;
 // 创建PDO实例并设置错误模式

@@ -1,6 +1,17 @@
 <?php
 //define('ABSPATH', dirname(__DIR__));
 require_once 'lib/function.php';
+
+if (!file_exists('install.lock')) {
+    // 当 install.lock 不存在时，表示系统未安装
+    echo "系统未安装，请完成安装流程。如需重新安装，请确保创建 install.lock 文件。\n";
+    
+    // 修正跳转逻辑：添加参数名并正确拼接URL
+    $redirectUrl = 'install.php' . urlencode($keyword);
+    header("Location: $redirectUrl");
+    exit; // 退出脚本
+}
+
 // 创建PDO实例并设置错误模式
 initDatabase();
 global $pdo;
