@@ -1,6 +1,4 @@
 <?php
-//define('ABSPATH', dirname(__DIR__));
-require_once 'lib/function.php';
 
 if (!file_exists('install.lock')) {
     // 当 install.lock 不存在时，表示系统未安装
@@ -11,6 +9,9 @@ if (!file_exists('install.lock')) {
     header("Location: $redirectUrl");
     exit; // 退出脚本
 }
+
+//define('ABSPATH', dirname(__DIR__));
+require_once 'lib/function.php';
 
 // 创建PDO实例并设置错误模式
 initDatabase();
