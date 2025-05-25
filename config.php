@@ -14,5 +14,10 @@ return [
     'password' => 'your_mail_pass',     // 邮箱密码/授权码
     'from' => 'your_mail_address',  // 发件人地址
     'encryption' => 'ssl'              // 加密方式（可选：tls/ssl）
+    ],
+    'geetest' => [
+        'id' => '您的极验ID',
+        'key' => '您的极验KEY',
+        'api_server' => 'https://gcaptcha4.geetest.com'
     ]
 ];
